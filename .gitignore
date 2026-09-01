@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+
+# Model weights (download procedure in README)
+*.pt
+*.pth
+checkpoints/
+sam-3d-body/
+
+# Data and outputs (archived in the CODY Zenodo record — see README)
+01_train_labels_raw/
+02_train_merged_by_video/
+03_train_merged_by_patient/
+04_train_sam3_outputs/
+05_external_videos/
+06_external_sam3_outputs/
+07_external_results/
+dataset_0_*/
+datasets_1_2_3_*/
+models/
+runs/
+outputs/
+external_validation/
+
+# Credentials — never commit tokens
+token*
+*.token
+.env

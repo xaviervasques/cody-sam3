@@ -1,0 +1,30 @@
+# CODY-SAM3 — Python dependencies
+#
+# PyTorch is intentionally NOT pinned here: install the build matching your
+# CUDA version first (see README "Installation"), e.g.
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+# After this file, also install the CLIP package required by Ultralytics SAM 3:
+#   pip uninstall -y clip
+#   pip install git+https://github.com/ultralytics/CLIP.git
+
+# Core scientific stack
+numpy
+pandas
+scipy
+scikit-learn
+joblib
+openpyxl
+matplotlib
+seaborn
+
+# SAM 3 segmentation (phases 1a / 2, GPU)
+ultralytics>=8.3.237
+opencv-python
+scikit-image
+pydantic
+huggingface_hub
+
+# TabICLv2 tabular foundation model + feature descriptors (phases 1b / 2)
+tabicl
+antropy

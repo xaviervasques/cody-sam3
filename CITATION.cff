@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "CODY-SAM3: fully foundation-model-based phenotyping of combined hyperkinetic movement disorders"
+type: software
+authors:
+  - family-names: Vasques
+    given-names: Xavier
+repository-code: "https://github.com/xaviervasques/cody-sam3"
+license: MIT
+preferred-citation:
+  type: article
+  title: "A fully foundation-model-based phenotyping of combined hyperkinetic movement disorders"
+  year: 2026
+  notes: "Submitted"
+  authors:
+    - family-names: Cif
+      given-names: Laura
+    - family-names: Souei
+      given-names: Zohra
+    - family-names: Demailly
+      given-names: Diane
+    - family-names: Castro-Jimenez
+      given-names: "Mayté"
+    - family-names: Ortigoza Escobar
+      given-names: Juan Dario
+    - family-names: Ur Rehman
+      given-names: Muhammad Mushhood
+    - family-names: Dornadic
+      given-names: Morgan
+    - family-names: Huby
+      given-names: Sophie
+    - family-names: Hariz
+      given-names: Gun-Marie
+    - family-names: Hubsch
+      given-names: "Cécile"
+    - family-names: Moraud
+      given-names: Eduardo M.
+    - family-names: Bloch
+      given-names: Jocelyne
+    - family-names: Horvath
+      given-names: Gabriella
+    - family-names: Oullier
+      given-names: Olivier
+    - family-names: Vasques
+      given-names: Xavier
