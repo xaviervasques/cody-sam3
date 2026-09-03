@@ -1,6 +1,6 @@
 # CODY-SAM3
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22232610.svg)](https://doi.org/10.5281/zenodo.22232610)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22232609.svg)](https://doi.org/10.5281/zenodo.22232609)
 
 **Fully foundation-model-based phenotyping of combined hyperkinetic movement disorders.**
 
@@ -171,31 +171,36 @@ hf download facebook/sam-3d-body-dinov3 --local-dir checkpoints/sam-3d-body-dino
 ### 4. CODY-SAM3 trained model bundles — to reproduce the paper's external validation
 
 The TabICLv2 bundles trained on the development cohort (Tier 1/2/3, with the
-retained **Tier 2** configuration: 81 signals, 1560 features) are archived in
-the **CODY** Zenodo record — see *Data availability* below. Download
-`models.zip` and pass `--bundle_dir models/sam3_tier2/...` to the
-inference/CV scripts.
+retained **Tier 2** configuration: 81 signals, 1560 features) are not
+distributed with the Zenodo record. Retrain them from the archived
+time-series with `phase_1b_training_cv_lopo.ipynb`, then pass
+`--bundle_dir` to the inference/CV scripts — or contact the corresponding
+author.
 
 ---
 
 ## Data availability
 
-The de-identified data and trained models are archived in the **CODY** record
-on Zenodo:
-**DOI: [10.5281/zenodo.22232610](https://doi.org/10.5281/zenodo.22232610)**
+The de-identified data are archived in the **CODY** record on Zenodo
+(CC BY 4.0, v1.1.0 or later):
+**DOI: [10.5281/zenodo.22232609](https://doi.org/10.5281/zenodo.22232609)**
 
 `dataset_0` is the paper's *training dataset*; `dataset_1/2/3` are the three
-evaluation datasets:
+evaluation datasets. Archive names carry the study and pipeline
+(`*_cody_3_sam3` for this study); each archive extracts to a folder named
+without that suffix:
 
-| Role                                            | Archive folder                    |
-|-------------------------------------------------|-----------------------------------|
-| Raw rater labels (dataset_0)                    | `dataset_0_labels_raw`            |
-| Merged-by-video labels (dataset_0)              | `dataset_0_merged_by_video`       |
-| Merged-by-patient labels (dataset_0)            | `dataset_0_merged_by_patient`     |
-| SAM 3 kinematic time-series (dataset_0)         | `dataset_0_sam3_timeseries`       |
-| SAM 3 kinematic time-series (datasets 1/2/3)    | `datasets_1_2_3_sam3_timeseries`  |
-| Results (inference/calibration/robustness)      | `datasets_1_2_3_results`          |
-| Trained TabICLv2 bundles (Tier 1/2/3) + CV runs | `models`                          |
+| Role                                              | Archive                                       |
+|---------------------------------------------------|-----------------------------------------------|
+| Raw rater labels + YOLOv8 keypoints (dataset_0)   | `dataset_0_labels_raw_cody_1_2_yolo.zip`      |
+| Merged-by-video labels + SAM 3 (dataset_0)        | `dataset_0_merged_by_video_cody_3_sam3.zip`   |
+| Merged-by-patient consensus (dataset_0)           | `dataset_0_merged_by_patient_cody_3_sam3.zip` |
+| SAM 3 kinematic time-series (dataset_0)           | `dataset_0_timeseries_cody_3_sam3.zip`        |
+| SAM 3 kinematic time-series (datasets 1/2/3)      | `datasets_1_2_3_timeseries_cody_3_sam3.zip`   |
+| Results (inference/calibration/robustness)        | `datasets_1_2_3_results_cody_3_sam3.zip`      |
+
+The record also carries `dataset_2_timeseries_cody_2_yolo.zip` (the pediatric
+YOLOv8 keypoints of the earlier CODY-2 study), not used by this pipeline.
 
 The **raw clinical videos cannot be shared publicly** (identifiable patient
 data). The Zenodo archive contains the de-identified SAM 3 kinematic
