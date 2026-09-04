@@ -183,7 +183,8 @@ author.
 
 The de-identified data are archived in the **CODY** record on Zenodo
 (CC BY 4.0, v1.1.0 or later):
-**DOI: [10.5281/zenodo.22232609](https://doi.org/10.5281/zenodo.22232609)**
+**DOI (v1.1.0, the published version): [10.5281/zenodo.22275553](https://doi.org/10.5281/zenodo.22275553)**
+(concept DOI for all versions: [10.5281/zenodo.22232609](https://doi.org/10.5281/zenodo.22232609))
 
 `dataset_0` is the paper's *training dataset*; `dataset_1/2/3` are the three
 evaluation datasets. Archive names carry the study and pipeline
